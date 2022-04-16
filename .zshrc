@@ -21,12 +21,21 @@ export PS1="%~$ "
 alias vim='nvim'
 alias ll='ls --color=auto -lh'
 alias lla='ls --color=auto -ahl'
+alias cls='clear'
 
+# Git commands
 ga() {
 	touch $1
 	git add .
 	git commit -m "$1"
 }
-
-#alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 alias config='/usr/bin/git --git-dir=/home/andrew/.cfg/ --work-tree=/home/andrew'
+
+
+# TaskWarrior
+alias ta='task add'
+alias t='task'
+td() {
+	task $1 done
+}
+

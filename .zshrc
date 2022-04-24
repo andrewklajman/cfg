@@ -33,14 +33,9 @@ alias config='/usr/bin/git --git-dir=/home/andrew/.cfg/ --work-tree=/home/andrew
 
 
 # TaskWarrior
-alias t='task list'
+alias t='clear; task list'
 alias ta='task add'
-td() {
-	task $1 done
-}
-tmd() {
-	clear
-	task $1 modify "due:$2"
-	task list
-}
+td() { clear; task $1 done; task list; }
+ti() { task $1 info }
+tm() { clear; task $1 modify $2; task list; }
 
